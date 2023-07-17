@@ -1,0 +1,19 @@
+/* Reset */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+/* Variáveis */
+:root{
+  --bg-color: #ffffff;
+  --input-busca-bg: #F5F5F5;
+  --input-placeholder: #A2A2A2;
+  --produtos-bg: #E5E5E5;
+  --texto-azul: #2A7AE4;
+  --texto-branco: #FFFFFF;
+  --texto-preto: #464646;
+  --bg-contato:#EAF2FD;
+}
