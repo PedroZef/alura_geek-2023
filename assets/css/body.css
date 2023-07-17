@@ -62,6 +62,11 @@ header {
   padding: 0 6.5rem;
 }
 
+.busca__barra {
+  display: flex;
+  justify-content: space-between;
+}
+
 .busca__logo {
   align-items: center;
   display: flex;
@@ -87,8 +92,8 @@ header {
 }
 
 .busca__logo input {
-  background: url('../images/lupa.png') no-repeat right;
-  background-position-x: 360px;
+  background: url('../imgs/lupa.png') no-repeat right;
+  background-position-x: 350px;
   background-color: var(--input-busca-bg);
   border-radius: 20px;
   height: 40px;
@@ -124,12 +129,18 @@ button {
   border: 1px solid var(--texto-azul);
   color: var(--texto-azul);
   width: 182px;
+  text-transform: uppercase;
 }
+
+ .login button:hover {
+   background-color: var(--texto-azul);
+   color: var(--texto-branco);
+ }
 
 /* Banner Area
 ========================================================================== */
 .banner {
-  background: url('../images/banner.png') center / cover no-repeat;
+  background: url('../imgs/banner.png') center / cover no-repeat;
   display: flex;
   height: 352px;
 }
@@ -266,7 +277,7 @@ button {
 
 /* Rodapé
 ========================================================================== */
-footer {
+.footer {
   align-items: center;
   background: var(--bg-color);
   display: flex;
@@ -276,7 +287,7 @@ footer {
   justify-content: center;
 }
 
-footer p {
+.footer p {
   font-weight: 500;
 }
 
@@ -297,7 +308,7 @@ footer p {
 }
 
 .input-erro{
-  background: url(../images/imagens-form-validation/error-icon.svg);
+  background: url(../images/imgs-form-validation/error-icon.svg);
   background-repeat: no-repeat;
   background-position: right;
 }
