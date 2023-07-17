@@ -42,6 +42,20 @@
   margin-bottom: 0;
 }
 
+.footer {
+  align-items: center;
+  background: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  height: 102px;
+  justify-content: center;
+}
+
+.footer p {
+  font-weight: 500;
+}
+
 
 /* Media Queries Devices
    ========================================================================== */

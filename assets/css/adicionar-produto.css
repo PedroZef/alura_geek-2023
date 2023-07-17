@@ -83,6 +83,19 @@
   width: 239px;
 }
 
+.login button {
+  background: transparent;
+  border: 1px solid var(--texto-azul);
+  color: var(--texto-azul);
+  width: 182px;
+  text-transform: uppercase;
+}
+
+.login button:hover {
+  background-color: var(--texto-azul);
+  color: var(--texto-branco);
+}
+
 /* Media Queries Devices
    ========================================================================== */
 
