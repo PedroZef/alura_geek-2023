@@ -1,152 +1,64 @@
-/* Login Adiministrador 
-========================================================================== */
-.login-admin {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+.menu-adm,
+.add-produto,
+.botao-footer {
+  border-radius: 5px;
 }
 
-.form-admin {
-  display: flex;
-  flex-direction: column;
-  margin: 4rem 0;
-  width: 560px;
-}
-
-.form-admin p {
-  font-size: 2rem;
-}
-
-.imagem-area {
-  align-items: center;
-  display: flex;
-  margin: 1rem 0;
-}
-
-.imagem-area p {
-  font-weight: 400;
-  padding: 0.5rem;
-}
-
-.imagem {
-  align-items: center;
-  background-color: var(--bg-color);
-  border: 1px dashed;
-  color: var(--input-placeholder);
-  display: flex;
-  flex-direction: column;
-  height: 152px;
-  justify-content: center;
-  text-align: center;
-  width: 282px;
-}
-
-.imagem {
-  background-image: url(../imgs/Vector-img.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-position-y: 20%;
-}
-
-.imagem img {
-  height: 100%;
-  object-fit: contain;
-}
-
-.imagem.active {
-  border: 1px solid var(--texto-azul);
-  background-color: var(--bg-contato);
-}
-
-.imagem p {
-  font-size: 0.875rem;
-}
-
-#picture[src=''] {
-  opacity: 0;
-}
-
-.input-nome::-webkit-outer-spin-button,
-.input-nome::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-/*
-.input-nome(type=number) {
-  -moz-appearance: t;
-}*/
-
-.btn__imagem {
-  background: transparent;
-  border: 1px solid var(--texto-azul);
-  color: var(--texto-azul);
-  width: 239px;
-}
-
-.login button {
-  background: transparent;
-  border: 1px solid var(--texto-azul);
-  color: var(--texto-azul);
-  width: 182px;
-  text-transform: uppercase;
-}
-
-.login button:hover {
-  background-color: var(--texto-azul);
-  color: var(--texto-branco);
-}
-
-/* Media Queries Devices
-   ========================================================================== */
-
-@media only screen and (max-width: 1024px) {
-  .form-admin p {
-    font-size: 1.375rem;
+@media (max-width:760px) {
+  .menu-adm {
+    padding: 10px 20px;
+    font-size: 15px;
   }
 
-  .form-admin button {
-    height: 51px;
+  #main-produtos {
+    align-items: center;
+    text-align: center;
+    padding: 50px 10px;
+  }
+
+  #adicionar-produtos {
+
+    padding: 0;
     width: 100%;
   }
 
-  .imagem-area .imagem p {
-    font-size: 0.875rem;
-  }
-
-}
-
-@media only screen and (max-width: 600px) {
-  .form-admin {
-    margin: 0;
-    padding: 1rem;
-  }
-
-  .imagem {
+  .adicionar-produto-formulario {
     width: 100%;
   }
+}
 
-  .imagem {
-    background-image: url(../imgs/Vector-mais.png);
+@media (max-width:630px) {
+  header {
+    padding: 10px;
   }
 
-  .imagem-area :nth-last-child(2),
-  .btn__imagem {
+  .ajuste-barra-pesquisa {
     display: none;
   }
 
+  .lado-direito {
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .adicionar-produto-formulario h3 {
+    font-size: 20px;
+  }
 }
 
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
-
-  .form-admin {
-    margin: 0;
-    padding: 2rem;
-    width: 100%;
+@media (max-width:400px) {
+  .menu-adm {
+    padding: 10px 20px;
+    font-size: 12px;
   }
+}
 
-  .imagem-area .btn__imagem {
-    width: 191px;
+@media (max-width:360px) {
+  .menu-adm {
+    padding: 10px 15px;
+    font-size: 10px;
   }
-
 }
