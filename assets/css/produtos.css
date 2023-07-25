@@ -38,10 +38,9 @@
 }
 
 .container {
-
   align-items: center;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 5px;
   width: 100%;
 }
@@ -305,6 +304,7 @@
     text-align: center;
     order: 0;
   }
+
   .removendo,
   .div-remove {
     flex-direction: column;
