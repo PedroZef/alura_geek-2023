@@ -1,69 +1,53 @@
-import { produtoServicos } from "../services/produtos-services.js";
+import { novoProduto } from './produtos-controllers.js';
 
-function editarProduto() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const idProduto = urlParams.get("id");
+function detalhesProdutoEspecifico(produto) {
+    const detalhesProduto = document.querySelector('.produto-especifico');
 
-    produtoServicos.getProdutoPorId(idProduto)
-        .then(produto => {
-            const mainEditaProduto = document.querySelector(".editar-produto");
-
-            mainEditaProduto.innerHTML = `
-            <div class="editar-produtos">
-                <form action="submit" class="editar-produto-formulario">
-                    <h3>Editar produto: <i>ID</i> = ${produto.id}</h3>
-                    <div class="url-imagem">
-                        <input type="url" name="url" value="${produto.imageUrl}" required>
-                        <label>URL da imagem</label>
-                    </div>
-                    <div class="categoria">
-                        <input type="text" name="categoria" value="${produto.section}" required>
-                        <label>Categoria</label>
-                    </div>
-                    <div class="nome-produto-edita">
-                        <input type="text" name="nome" value="${produto.name}" required>
-                        <label>Nome do produto</label>
-                    </div>
-                    <div class="preco-produto-edita">
-                        <input type="text" name="price" value="${produto.price}" required>
-                        <label>Preço</label>
-                    </div>
-                    <div class="descricao-edita">
-                        <textarea name="descricao" required>${produto.description}</textarea>
-                        <label>Descrição do produto</label>
-                    </div>
-                    <button type="submit" class="salvar-edicao">Salvar</button>
-                </form>
-            </div>
-            `;
-
-            const btnSalvarEdicao = document.querySelector(".salvar-edicao");
-            btnSalvarEdicao.addEventListener("click", () => salvarEdicao(idProduto));
-        })
-        .catch(error => console.error("Erro ao carregar produto para edição:", error));
+    detalhesProduto.innerHTML = `
+    <section class="produto-descricao">
+        <img src="${produto.imageUrl}" alt="${produto.alt}">
+        <div class="produto-direita">
+            <h1>${produto.name}</h1>
+            <span>${produto.price}</span>
+            <p>${produto.description}</p>
+        </div>
+    </section>
+    <section id="${produto.section}" class="ajuste-produto-detalhe">
+        <div class="titulo">
+            <h3>Produtos similares</h3>
+        </div>
+        <ul class="produtos"></ul>
+    </section>
+    `;
 }
 
-function salvarEdicao(idProduto) {
-    const urlImagem = document.querySelector("input[name='url']").value;
-    const categoria = document.querySelector("input[name='categoria']").value;
-    const nomeProduto = document.querySelector("input[name='nome']").value;
-    const precoProduto = document.querySelector("input[name='price']").value;
-    const descricaoProduto = document.querySelector("textarea[name='descricao']").value;
+function exibirProdutosSimilares(produtos, sectionId) {
+    const sectionProdutosSimilares = document.getElementById(sectionId);
+    const ulProdutosSimilares = sectionProdutosSimilares.querySelector('.produtos');
 
-    const produtoAtualizado = {
-        imageUrl: urlImagem,
-        section: categoria,
-        name: nomeProduto,
-        price: precoProduto,
-        description: descricaoProduto
-    };
-
-    produtoServicos.atualizarProduto(idProduto, produtoAtualizado)
-        .then(produto => {
-            console.log("Produto atualizado com sucesso:", produto);
-            window.location.href = "products.html";
-        })
-        .catch(error => console.error("Erro ao atualizar produto:", error));
+    produtos.forEach(produto => {
+        if (produto.id !== selectedProductId) { 
+            const novoCard = novoProduto(produto.imageUrl, produto.name, produto.id, produto.price, produto.alt);
+            ulProdutosSimilares.appendChild(novoCard);
+        }
+    });
 }
 
-editarProduto();
+const urlParams = new URLSearchParams(window.location.search);
+const selectedProductId = urlParams.get('id');
+
+fetch('https://64aef1c2c85640541d4df0b3.mockapi.io/produtos')
+    .then(resposta => resposta.json())
+    .then(produtos => {
+        const produtoEspecifico = produtos.find(produto => produto.id === Number(selectedProductId));
+
+        if (produtoEspecifico) {
+            detalhesProdutoEspecifico(produtoEspecifico);
+
+            const produtosSimilares = produtos.filter(produto => produto.section === produtoEspecifico.section);
+            exibirProdutosSimilares(produtosSimilares, produtoEspecifico.section);
+        } else {
+            console.log('Produto não encontrado');
+        }
+    })
+    .catch(error => console.log(error));
