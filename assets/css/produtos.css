@@ -234,10 +234,6 @@
   }
 }
 
-.container {
-  display: flex;
-}
-
 @media (max-width: 950px) {
 
   .section-star-wars,
@@ -256,7 +252,7 @@
     display: flex;
     grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
-    padding:  5ch 0;
+    padding: 5px 0;
   }
 
   .produtos li img {
@@ -281,6 +277,14 @@
 
 @media (max-width: 650px) {
 
+  .container {
+    align-items: center;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    flex-wrap: wrap;
+    padding: 5px 0;
+  }
+
   .produtos {
     align-items: center;
     display: grid;
@@ -294,20 +298,21 @@
     align-items: center;
     justify-items: center;
     padding: 10px;
+    width: 50%;
   }
 }
 
 @media (max-width: 400px) {
   .container {
     display: flex;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 10px;
-    width: 380;
+
   }
 
-  .produto p a {
+  .produto img p a {
     align-items: center;
-    margin: 10px;
+    justify-items: center;
+    padding: 10px;
+    width: 280px;
   }
 
   .titulo h3 {
