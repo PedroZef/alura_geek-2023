@@ -38,7 +38,10 @@ function editarProduto() {
             `;
 
             const btnSalvarEdicao = document.querySelector(".salvar-edicao");
-            btnSalvarEdicao.addEventListener("click", () => salvarEdicao(idProduto));
+            btnSalvarEdicao.addEventListener("click", event => {
+                event.preventDefault();
+                salvarEdicao(idProduto);
+            }); 
         })
         .catch(error => console.error("Erro ao carregar produto para edição:", error));
 }
