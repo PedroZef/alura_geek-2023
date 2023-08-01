@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="lado-direito">
-            <a class="menu" href=".">
+            <a class="menu" href="./products.html">
                 <button class="menu-adm">Menu Administrador</button>
             </a>
             <div class="lupa">
@@ -42,7 +42,7 @@
     </header>
     <main class="adicionar-produtos" id="main-produtos">
         <div class="editar-produtos" id="adicionar-produtos">
-            <form action="./edit.html" class="adicionar-produto-formulario">
+            <form action="submit" class="adicionar-produto-formulario">
                 <h3>Adicionar novo produto</h3>
                 <div class="add-url-imagem">
                     <input type="url" name="url" class="input-url-add" required>
@@ -93,8 +93,8 @@
                             <label>Escreva sua mensagem</label>
                         </div>
                     </div>
-                    <span id="error-msg" style="display: none; color: red;"></span>
-                    <span id="success-msg" style="display: none; color: green;"></span>
+                    <span id="error-msg" style="display: none; color: rgb(214, 3, 3);"></span>
+                    <span id="success-msg" style="display: none; color: rgb(5, 76, 5);"></span>
                     <button class="botao-footer" type="submit">Enviar Mensagem</button>
                 </form>
             </div>
@@ -107,7 +107,6 @@
     <script src="./assets/services/produtos-services.js" type="module"></script>
     <script src="./assets/controllers/adicionar.produto.js" type="module"></script>
     <script type="module" src="./assets/js/footerFormulario.js"></script>
-    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
