@@ -40,10 +40,14 @@ function editarProduto() {
             const btnSalvarEdicao = document.querySelector(".salvar-edicao");
             btnSalvarEdicao.addEventListener("click", event => {
                 event.preventDefault();
-                salvarEdicao(idProduto);
+                newFunction();
             }); 
         })
         .catch(error => console.error("Erro ao carregar produto para edição:", error));
+
+    function newFunction() {
+        salvarEdicao(idProduto);
+    }
 }
 
 function salvarEdicao(idProduto) {

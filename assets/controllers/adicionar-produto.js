@@ -3,13 +3,12 @@ import { produtoServicos } from "../services/produtos-services.js";
 function salvarProduto(event) {
     event.preventDefault();
 
-    const urlImagem = document.querySelector("input[name='url']").value;
-    const nomeProduto = document.querySelector("input[name='nome']").value;
-    let precoProduto = document.querySelector("input[name='price']").value;
-    const descricaoProduto = document.querySelector("textarea[name='descricao']").value;
+    const { value: urlImagem } = document.querySelector("input[name='url']");
+    const { value: nomeProduto } = document.querySelector("input[name='nome']");
+    let { value: precoProduto } = document.querySelector("input[name='price']");
+    const { value: descricaoProduto } = document.querySelector("textarea[name='descricao']");
 
-    precoProduto = parseFloat(precoProduto.replace(/[^\d]/g, ""));
-    precoProduto = precoProduto.toFixed(2);
+    precoProduto = parseFloat(precoProduto);
 
     const novoProduto = {
         imageUrl: urlImagem,

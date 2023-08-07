@@ -16,7 +16,7 @@ export const novoProduto = (imageUrl, name, id, price, alt) => {
 
 const preencherProdutos = (sectionId, produtos) => {
     const section = document.getElementById(sectionId);
-    const ulProdutos = section.querySelector('.produtos');
+    const ulProdutos = section.querySelector('.produto');
 
     produtos.forEach(produto => {
         const { imageUrl, name, id, price, alt } = produto;

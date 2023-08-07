@@ -37,10 +37,15 @@
   color: #2a7ae4;
 }
 
+
 .container {
   align-items: center;
   display: flex;
-  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px auto;
+  overflow: hidden;
+
 
 }
 
@@ -59,7 +64,7 @@
 }
 
 .titulo-espaço {
-  margin: 20px 0;
+  margin: 20px 10px;
 }
 
 .titulo-espaço a {
@@ -84,9 +89,9 @@
 }
 
 .todos-produtos {
-  max-width: 1240px;
+  max-width: 1220px;
   margin: auto;
-  padding: 64px 10px;
+  padding: 44px 10px;
 }
 
 .lista-todos-produtos {
@@ -94,12 +99,14 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 64px 22px;
+  justify-content: space-between;
+  gap: 36px 5px;
 }
 
 .lista-todos-produtos li {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 5px;
   position: relative;
 }
@@ -133,7 +140,7 @@
   padding: 10px;
   gap: 16px;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   max-width: 1240px;
 }
 
@@ -234,14 +241,13 @@
   }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 960px) {
 
   .section-star-wars,
   .section-consoles,
   .section-diversos {
     align-items: center;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     gap: 5px;
     text-align: center;
@@ -252,11 +258,11 @@
     display: flex;
     grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
-    padding: 5px 0;
+    padding: 5px;
   }
 
   .produtos li img {
-    width: 80%;
+    width: 100%;
   }
 
   .titulo {
@@ -280,9 +286,9 @@
   .container {
     align-items: center;
     display: flex;
-    grid-template-columns: repeat(2, 1fr);
     flex-wrap: wrap;
-    padding: 5px 0;
+    justify-content: space-between;
+    padding: 5px;
   }
 
   .produtos {
@@ -298,13 +304,17 @@
     align-items: center;
     justify-items: center;
     padding: 10px;
-    width: 50%;
+    gap: 30px;
+    width: 100%;
   }
 }
 
 @media (max-width: 400px) {
   .container {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
 
   }
 
@@ -312,17 +322,17 @@
     align-items: center;
     justify-items: center;
     padding: 10px;
-    width: 280px;
+    width: 260px;
   }
 
   .titulo h3 {
-    font-size: 22px;
+    font-size: 32px;
   }
 
   .titulo a {
     align-items: center;
     text-align: center;
-    order: 1;
+
   }
 
   .removendo,
