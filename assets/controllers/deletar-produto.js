@@ -1,13 +1,5 @@
 import { produtoServicos } from "../services/produtos-services.js";
 
-const botoesDeletar = document.querySelectorAll(".deletar");
-botoesDeletar.forEach(botao => {
-    botao.addEventListener("click", () => {
-        const idProduto = botao.parentElement.dataset.id;
-        deletarProduto(idProduto);
-    });
-});
-
 export function deletarProduto(idProduto) {
     produtoServicos.deletarProduto(idProduto)
         .then(() => {
@@ -56,3 +48,11 @@ export function botaoApareceDelet() {
         }
     });
 }
+
+const botoesDeletar = document.querySelectorAll(".deletar");
+botoesDeletar.forEach(botao => {
+    botao.addEventListener("click", () => {
+        const idProduto = botao.parentElement.dataset.id;
+        deletarProduto(idProduto);
+    });
+});

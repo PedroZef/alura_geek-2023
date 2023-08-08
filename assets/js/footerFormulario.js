@@ -1,8 +1,3 @@
-document.querySelector('.form-footer').addEventListener('submit', function (event) {
-    event.preventDefault();
-    validateForm();
-});
-
 function validateForm() {
     const nameInput = document.querySelector('input[name="name"]');
     const messageTextarea = document.querySelector('textarea[name="message"]');
@@ -30,3 +25,8 @@ function validateForm() {
         messageTextarea.value = '';
     }
 }
+
+document.querySelector('.form-footer').addEventListener('submit', function (event) {
+    event.preventDefault();
+    validateForm();
+});

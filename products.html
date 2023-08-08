@@ -23,16 +23,22 @@
 <body>
     <header>
         <div class="lado-esquerdo">
-            <a href="./index.html">
-                <img src="./assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek" />
+            <a href="index.html">
+                <img src="assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
             </a>
             <div class="ajuste-barra-pesquisa">
-                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa" />
+                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+                <ul id="resultadosPesquisa"></ul>
             </div>
         </div>
         <div class="lado-direito">
+            <a class="login" href="login.html" style="display: none;">
+                <button class="button-login">Login</button>
+            </a>
             <div class="lupa">
-                <img src="./assets/image/header/search/lupa.svg" />
+                <button class="botao-lupa">
+                    <img src="assets/image/header/search/lupa.svg">
+                </button>
             </div>
         </div>
     </header>
@@ -42,7 +48,7 @@
         <div class="footer-container">
             <div class="footer-ajuste-container">
                 <div class="footer-lado-esquerdo">
-                    <img src="./assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek" />
+                    <img src="assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
                     <nav>
                         <ul>
                             <li><a href="">Quem somos nós</a></li>
@@ -57,7 +63,7 @@
                 <form class="form-footer" onsubmit="return validateForm()">
                     <span>Fale conosco</span>
                     <div class="input-nome">
-                        <input class="footer-input-required" name="name" required />
+                        <input class="footer-input-required" name="name" required>
                         <label>Nome</label>
                     </div>
                     <div class="ajuste-textarea">
@@ -66,12 +72,13 @@
                             <label>Escreva sua mensagem</label>
                         </div>
                     </div>
-                    <span id="error-msg" style="display: none; color: red"></span>
-                    <span id="success-msg" style="display: none; color: green"></span>
+                    <span id="error-msg" style="display: none; color: red;"></span>
+                    <span id="success-msg" style="display: none; color: green;"></span>
                     <button class="botao-footer" type="submit">Enviar Mensagem</button>
                 </form>
             </div>
         </div>
+
         <div class="footer__info">
             <p class="footer__nome">
                 Desenvolvido por Pedro Zeferino da Silva &copy; 2023
@@ -83,7 +90,7 @@
     <script src="./assets/controllers/deletar-produto.js" type="module"></script>
     <script src="./assets/controllers/produto-especifico.js" type="module"></script>
     <script src="./assets/js/footerFormulario.js" type="module"></script>
-   
+
 </body>
 
 </html>

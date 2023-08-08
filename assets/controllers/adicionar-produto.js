@@ -3,12 +3,12 @@ import { produtoServicos } from "../services/produtos-services.js";
 function salvarProduto(event) {
     event.preventDefault();
 
-    const { value: urlImagem } = document.querySelector("input[name='url']");
-    const { value: nomeProduto } = document.querySelector("input[name='nome']");
-    let { value: precoProduto } = document.querySelector("input[name='price']");
-    const { value: descricaoProduto } = document.querySelector("textarea[name='descricao']");
+    const urlImagem = document.querySelector("input[name='url']").value;
+    const nomeProduto = document.querySelector("input[name='nome']").value;
+    let precoProduto = document.querySelector("input[name='price']").value;
+    const descricaoProduto = document.querySelector("textarea[name='descricao']").value;
 
-    precoProduto = parseFloat(precoProduto);
+    precoProduto = parseFloat(precoProduto.replace(/[^\d]/g, ""));
 
     const novoProduto = {
         imageUrl: urlImagem,
@@ -27,3 +27,10 @@ function salvarProduto(event) {
 
 const formAdicionarProduto = document.querySelector(".adicionar-produto-formulario");
 formAdicionarProduto.addEventListener("submit", salvarProduto);
+
+const priceInput = document.querySelector("input[name='price']");
+priceInput.addEventListener("input", function (event) {
+    const cleanedValue = event.target.value.replace(/[^\d.]/g, "");
+
+    event.target.value = cleanedValue;
+});

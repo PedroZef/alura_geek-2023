@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Geek 2023</title>
+    <title>Alura Geek 2023 - Add Produtos</title>
 
-    <link rel="stylesheet" href="./assets/css/header.css">
     <link rel="stylesheet" href="./assets/css/body.css">
     <link rel="stylesheet" href="./assets/css/edita-produto.css">
     <link rel="stylesheet" href="./assets/css/adicionar-produto.css">
@@ -21,55 +20,55 @@
 
 </head>
 
-<body class="bodyteste">
-    <header>
-        <div class="lado-esquerdo">
-            <a href="./index.html">
-                <img src="./assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
-            </a>
-            <div class="ajuste-barra-pesquisa">
-                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+<body>
+<header>
+    <div class="lado-esquerdo">
+        <a href="index.html">
+            <img src="assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
+        </a>
+        <div class="ajuste-barra-pesquisa">
+            <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+        </div>
+    </div>
+    <div class="lado-direito">
+        <a class="menu" href="products.html">
+            <button class="menu-adm">Menu Administrador</button>
+        </a>
+        <div class="lupa">
+            <img src="assets/image/header/search/lupa.svg">
+        </div>
+    </div>
+</header>
+<main class="adicionar-produtos" id="main-produtos">
+    <div class="editar-produtos" id="adicionar-produtos">
+        <form action="submit" class="adicionar-produto-formulario">
+            <h3>Adicionar novo produto</h3>
+            <div class="add-url-imagem">
+                <input type="url" name="url" class="input-url-add" required>
+                <label class="label-url-add">URL da imagem</label>
             </div>
-        </div>
-        <div class="lado-direito">
-            <a class="menu" href="./products.html">
-                <button class="menu-adm">Menu Administrador</button>
-            </a>
-            <div class="lupa">
-                <img src="./assets/image/header/search/lupa.svg">
+            <div class="add-nome-produto-edita">
+                <input type="text" name="nome" class="input-nome-add" required>
+                <label class="label-nome-add">Nome do produto</label>
             </div>
-        </div>
-    </header>
-    <main class="adicionar-produtos" id="main-produtos">
-        <div class="editar-produtos" id="adicionar-produtos">
-            <form action="submit" class="adicionar-produto-formulario">
-                <h3>Adicionar novo produto</h3>
-                <div class="add-url-imagem">
-                    <input type="url" name="url" class="input-url-add" required>
-                    <label class="label-url-add">URL da imagem</label>
-                </div>
-                <div class="add-nome-produto-edita">
-                    <input type="text" name="nome" class="input-nome-add" required>
-                    <label class="label-nome-add">Nome do produto</label>
-                </div>
-                <div class="add-preco-produto-edita">
-                    <input type="text" name="price" class="input-preco-add" required>
-                    <label class="label-preco-add">Preço</label>
-                </div>
-                <div class="add-descricao-edita">
-                    <textarea name="descricao" class="input-descricao-add" required></textarea>
-                    <label class="label-descricao-add">Descrição do produto</label>
-                </div>
-                <button type="submit" class="add-produto">Enviar produto</button>
-            </form>
-        </div>
-    </main>
+            <div class="add-preco-produto-edita">
+                <input type="text" name="price" class="input-preco-add" required>
+                <label class="label-preco-add">Preço</label>
+            </div>
+            <div class="add-descricao-edita">
+                <textarea name="descricao" class="input-descricao-add" required maxlength="150"></textarea>
+                <label class="label-descricao-add">Descrição do produto</label>
+            </div>
+            <button type="submit" class="add-produto">Enviar produto</button>
+        </form>
+    </div>
+</main>
 
     <footer>
         <div class="footer-container">
             <div class="footer-ajuste-container">
                 <div class="footer-lado-esquerdo">
-                    <img src="./assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
+                    <img src="assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
                     <nav>
                         <ul>
                             <li><a href="">Quem somos nós</a></li>
@@ -93,8 +92,8 @@
                             <label>Escreva sua mensagem</label>
                         </div>
                     </div>
-                    <span id="error-msg" style="display: none; color: rgb(214, 3, 3);"></span>
-                    <span id="success-msg" style="display: none; color: rgb(5, 76, 5);"></span>
+                    <span id="error-msg" style="display: none; color: red;"></span>
+                    <span id="success-msg" style="display: none; color: green;"></span>
                     <button class="botao-footer" type="submit">Enviar Mensagem</button>
                 </form>
             </div>
@@ -107,7 +106,7 @@
     <script src="./assets/services/produtos-services.js" type="module"></script>
     <script src="./assets/controllers/adicionar.produto.js" type="module"></script>
     <script type="module" src="./assets/js/footerFormulario.js"></script>
-    <script type="module" src="./add-products.html"></script>
+
 </body>
 
 </html>
