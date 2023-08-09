@@ -21,15 +21,15 @@
     top: 25px;
     left: 12px;
     pointer-events: none;
-    transition: .15s;
+    transition:.15s;
     color: #a2a2a2;
 }
 
-input:focus~label,
-input:valid~label,
-.input-descricao-add:focus~label,
-.input-descricao-add:valid~label {
-    transform: translateY(-20px);
-    font-size: 13px;
-    color: #2a7ae4;
+input:focus ~ label,
+input:valid ~ label,
+.input-descricao-add:focus ~ label,
+.input-descricao-add:valid ~ label {
+    transform:translateY(-20px);
+    font-size:13px;
+    color:#2a7ae4;
 }

@@ -6,63 +6,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Geek 2023 - Add Produtos</title>
 
-    <link rel="stylesheet" href="./assets/css/body.css">
-    <link rel="stylesheet" href="./assets/css/edita-produto.css">
-    <link rel="stylesheet" href="./assets/css/adicionar-produto.css">
-    <link rel="stylesheet" href="./assets/css/valid.css">
-
-    <link rel="stylesheet" href="./assets/css/footer.css">
-
+    <link rel="icon" type="image/png" href="assets/image/header/logo/alurageek-control.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/edita-produto.css">
+    <link rel="stylesheet" href="assets/css/adicionar-produto.css">
+    <link rel="stylesheet" href="assets/css/valid.css">
 
+    <link rel="stylesheet" href="assets/css/footer.css">
 </head>
 
 <body>
-<header>
-    <div class="lado-esquerdo">
-        <a href="index.html">
-            <img src="assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
-        </a>
-        <div class="ajuste-barra-pesquisa">
-            <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+    <header>
+        <div class="lado-esquerdo">
+            <a href="index.html">
+                <img src="assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
+            </a>
+            <div class="ajuste-barra-pesquisa">
+                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+            </div>
         </div>
-    </div>
-    <div class="lado-direito">
-        <a class="menu" href="products.html">
-            <button class="menu-adm">Menu Administrador</button>
-        </a>
-        <div class="lupa">
-            <img src="assets/image/header/search/lupa.svg">
+        <div class="lado-direito">
+            <a class="menu" href="products.html">
+                <button class="menu-adm">Menu Administrador</button>
+            </a>
+            <div class="lupa">
+                <img src="assets/image/header/search/lupa.svg">
+            </div>
         </div>
-    </div>
-</header>
-<main class="adicionar-produtos" id="main-produtos">
-    <div class="editar-produtos" id="adicionar-produtos">
-        <form action="submit" class="adicionar-produto-formulario">
-            <h3>Adicionar novo produto</h3>
-            <div class="add-url-imagem">
-                <input type="url" name="url" class="input-url-add" required>
-                <label class="label-url-add">URL da imagem</label>
-            </div>
-            <div class="add-nome-produto-edita">
-                <input type="text" name="nome" class="input-nome-add" required>
-                <label class="label-nome-add">Nome do produto</label>
-            </div>
-            <div class="add-preco-produto-edita">
-                <input type="text" name="price" class="input-preco-add" required>
-                <label class="label-preco-add">Preço</label>
-            </div>
-            <div class="add-descricao-edita">
-                <textarea name="descricao" class="input-descricao-add" required maxlength="150"></textarea>
-                <label class="label-descricao-add">Descrição do produto</label>
-            </div>
-            <button type="submit" class="add-produto">Enviar produto</button>
-        </form>
-    </div>
-</main>
+    </header>
+    <main class="adicionar-produtos" id="main-produtos">
+        <div class="editar-produtos" id="adicionar-produtos">
+            <form action="" class="adicionar-produto-formulario">
+                <h3>Adicionar novo produto</h3>
+                <div class="add-url-imagem">
+                    <input type="url" name="url" class="input-url-add" required>
+                    <label class="label-url-add">URL da imagem</label>
+                </div>
+                <div class="add-nome-produto-edita">
+                    <input type="text" name="nome" class="input-nome-add" required>
+                    <label class="label-nome-add">Nome do produto</label>
+                </div>
+                <div class="add-preco-produto-edita">
+                    <input type="text" name="price" class="input-preco-add" required>
+                    <label class="label-preco-add">Preço</label>
+                </div>
+                <div class="add-descricao-edita">
+                    <textarea name="descricao" class="input-descricao-add" required maxlength="150"></textarea>
+                    <label class="label-descricao-add">Descrição do produto</label>
+                </div>
+                <button type="submit" class="add-produto">Enviar produto</button>
+            </form>
+        </div>
+    </main>
 
     <footer>
         <div class="footer-container">
@@ -98,6 +98,7 @@
                 </form>
             </div>
         </div>
+
         <div class="footer__info">
             <p class="footer__nome">Desenvolvido por Pedro Zeferino da Silva &copy; 2023</p>
         </div>

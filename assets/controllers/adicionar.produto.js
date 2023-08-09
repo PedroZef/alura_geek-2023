@@ -9,6 +9,7 @@ function salvarProduto(event) {
     const descricaoProduto = document.querySelector("textarea[name='descricao']").value;
 
     precoProduto = parseFloat(precoProduto.replace(/[^\d]/g, ""));
+    precoProduto = precoProduto.toFixed(2);
 
     const novoProduto = {
         imageUrl: urlImagem,
@@ -29,7 +30,7 @@ const formAdicionarProduto = document.querySelector(".adicionar-produto-formular
 formAdicionarProduto.addEventListener("submit", salvarProduto);
 
 const priceInput = document.querySelector("input[name='price']");
-priceInput.addEventListener("input", function (event) {
+priceInput.addEventListener("input", function(event) {
     const cleanedValue = event.target.value.replace(/[^\d.]/g, "");
 
     event.target.value = cleanedValue;

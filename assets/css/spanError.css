@@ -3,6 +3,6 @@
     display: none;
 }
 
-.input-descricao-add:invalid~.erro-caracteres {
+.input-descricao-add:invalid ~ .erro-caracteres {
     display: block;
 }

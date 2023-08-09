@@ -6,283 +6,129 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alura Geek 2023 - Home</title>
 
-    <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/body.css">
-    <link rel="stylesheet" href="./assets/css/capa.css">
-    <link rel="stylesheet" href="./assets/css/produtos.css">
-
-    <link rel="stylesheet" href="assets/css/footer.css">
-
+    <link rel="icon" type="image/png" href="assets/image/header/logo/alurageek-control.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
-</head>
-
-<body>
-    <header>
-        <div class="lado-esquerdo">
-            <a href="index.html">
-                <img src="./assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
-            </a>
-            <div class="ajuste-barra-pesquisa">
-                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/body.css">
+    <link rel="stylesheet" href="assets/css/capa.css">
+    <link rel="stylesheet" href="assets/css/produtos.css">
+    <link rel="stylesheet" href="assets/css/barraPesquisa.css">
+    
+    <link rel="stylesheet" href="assets/css/footer.css">
+    </head>
+    
+    <body>
+        <header>
+            <div class="lado-esquerdo">
+                <a href="index.html">
+                    <img src="assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
+                </a>
+                <div class="ajuste-barra-pesquisa">
+                    <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
+                    <ul id="resultadosPesquisa"></ul>
+                </div>
             </div>
-        </div>
-        <div class="lado-direito">
-            <a class="login" href="./login.html">
-                <button class="button-login">Login</button>
-            </a>
-            <div class="lupa">
-                <img src="./assets/image/header/search/lupa.svg">
-            </div>
-        </div>
-    </header>
-    <main>
-        <section class="capa">
-            <div class="entrada-promocao">
-                <h2>Dezembro Promocional</h2>
-                <p>Produtos selecionados com 33% de desconto</p>
-                <a href="#consoles">
-                    <button class="button-promocao">
-                        Ver Consoles
+            <div class="lado-direito">
+                <a class="login" href="login.html">
+                    <button class="button-login">Login</button>
+                </a>
+                <div class="lupa">
+                    <button class="botao-lupa">
+                        <img src="assets/image/header/search/lupa.svg">
                     </button>
-                </a>
+                </div>
             </div>
-        </section>
-
-        <section id="starWars" class="section-star-wars">
-            <div class="titulo">
-                <h3>Star Wars</h3>
-                <a href="./products.html">
-                    Ver tudo
-                    <img src="./assets/image/produtos/seta.svg">
-                </a>
-            </div>
-
-            <div class="container">
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/starwars/caneca.svg" alt="" class="url-imagem">
-                        <p class="descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
+        </header>
+        <main>
+            <section class="capa">
+                <div class="entrada-promocao">
+                    <h2>Dezembro Promocional</h2>
+                    <p>Produtos selecionados com 33% de desconto</p>
+                    <a href="#consoles">
+                        <button class="button-promocao">
+                            Ver Consoles
+                        </button>
+                    </a>
                 </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/starwars/darthvaderlego.svg" alt="" class="url-imagem">
-                        <p class="descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/starwars/kyloren.svg" alt="" class="url-imagem">
-                        <p class="descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/starwars/yoda.svg" alt="" class="url-imagem">
-                        <p class="descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/starwars/clone.svg" alt="" class="url-imagem">
-                        <p class="descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/starwars/yodabebe.svg" alt="" class="url-imagem">
-                        <p class="descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
+            </section>
+            <section id="starWars" class="section-star-wars">
+                <div class="titulo">
+                    <h3>Star Wars</h3>
+                    <a href="login.html">
+                        Ver tudo
+                        <img src="assets/image/produtos/seta.svg">
+                    </a>
                 </div>
                 <ul class="produtos"></ul>
-            </div>
-
-        </section>
-
-        <section id="consoles" class="section-consoles">
-            <div class="titulo">
-                <h3>Consoles</h3>
-                <a href="./login.html">
-                    Ver tudo
-                    <img src="./assets/image/produtos/seta.svg">
-                </a>
-            </div>
-
-            <div class="container">
-
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/console/controle.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/console/xbox.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/console/gameboy.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/console/nintendo.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/console/ps5.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/console/wii.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
+            </section>
+            <section id="consoles" class="section-consoles">
+                <div class="titulo">
+                    <h3>Consoles</h3>
+                    <a href="login.html">
+                        Ver tudo
+                        <img src="assets/image/produtos/seta.svg">
+                    </a>
                 </div>
                 <ul class="produtos"></ul>
-            </div>
-        </section>
-
-        <section id="diversos" class="section-diversos">
-            <div class="titulo">
-                <h3>Diversos</h3>
-                <a href="./login.html">
-                    Ver tudo
-                    <img src="./assets/image/produtos/seta.svg">
-                </a>
-            </div>
-            <div class="container">
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/diversos/camisa-japonesa.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/diversos/relogio.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/diversos/camisa.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/diversos/sonic.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/diversos/realidadevirtual.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#" class=>Ver Produto</a>
-                    </div>
-                </div>
-                <div class="prod-holder">
-                    <div class="produto">
-                        <img src="./assets/image/produtos/diversos/pikachu.svg" alt="" class="url-imagem"">
-                    <p class=" descricao">Produto xyz</p>
-                        <p class="preco">60,00</p>
-                        <a href="#diversos" class=>Ver Produto</a>
-                    </div>
+            </section>
+            <section id="diversos" class="section-diversos">
+                <div class="titulo">
+                    <h3>Diversos</h3>
+                    <a href="login.html">
+                        Ver tudo
+                        <img src="assets/image/produtos/seta.svg">
+                    </a>
                 </div>
                 <ul class="produtos"></ul>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-ajuste-container">
-                <div class="footer-lado-esquerdo">
-                    <img src="./assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
-                    <nav>
-                        <ul>
-                            <li><a href="">Quem somos nós</a></li>
-                            <li><a href="">Política de privacidade</a></li>
-                            <li><a href="">Programa fidelidade</a></li>
-                            <li><a href="">Nossas lojas</a></li>
-                            <li><a href="">Quero ser franqueado</a></li>
-                            <li><a href="">Anuncie aqui</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <form class="form-footer" onsubmit="return validateForm()">
-                    <span>Fale conosco</span>
-                    <div class="input-nome">
-                        <input class="footer-input-required" name="name" required>
-                        <label>Nome</label>
+            </section>
+        </main>
+    
+        <footer>
+            <div class="footer-container">
+                <div class="footer-ajuste-container">
+                    <div class="footer-lado-esquerdo">
+                        <img src="assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
+                        <nav>
+                            <ul>
+                                <li><a href="">Quem somos nós</a></li>
+                                <li><a href="">Política de privacidade</a></li>
+                                <li><a href="">Programa fidelidade</a></li>
+                                <li><a href="">Nossas lojas</a></li>
+                                <li><a href="">Quero ser franqueado</a></li>
+                                <li><a href="">Anuncie aqui</a></li>
+                            </ul>
+                        </nav>
                     </div>
-                    <div class="ajuste-textarea">
-                        <div class="div-textarea">
-                            <textarea class="footer-textarea-required" name="message" required></textarea>
-                            <label>Escreva sua mensagem</label>
+                    <form class="form-footer" onsubmit="return validateForm()">
+                        <span>Fale conosco</span>
+                        <div class="input-nome">
+                            <input class="footer-input-required" name="name" required>
+                            <label>Nome</label>
                         </div>
-                    </div>
-                    <span id="error-msg" style="display: none; color: red;"></span>
-                    <span id="success-msg" style="display: none; color: green;"></span>
-                    <button class="botao-footer" type="submit">Enviar Mensagem</button>
-                </form>
+                        <div class="ajuste-textarea">
+                            <div class="div-textarea">
+                                <textarea class="footer-textarea-required" name="message" required></textarea>
+                                <label>Escreva sua mensagem</label>
+                            </div>
+                        </div>
+                        <span id="error-msg" style="display: none; color: red;"></span>
+                        <span id="success-msg" style="display: none; color: green;"></span>
+                        <button class="botao-footer" type="submit">Enviar Mensagem</button>
+                    </form>
+                </div>
             </div>
-        </div>
+    
         <div class="footer__info">
             <p class="footer__nome">Desenvolvido por Pedro Zeferino da Silva &copy; 2023</p>
         </div>
     </footer>
 
-    <script type="module" src="./assets/controllers/produtos-controllers.js"></script>
-    <script type="module" src="./assets/services/produtos-services.js"></script>
-    <script type="module" src="./assets/js/footerFormulario.js"></script>
-    
+    <script type="module" src="assets/controllers/produtos-controllers.js"></script>
+    <script type="module" src="assets/services/produtos-services.js"></script>
+    <script type="module" src="assets/js/footerFormulario.js"></script>
+    <script src="assets/js/barraPesquisa.js"></script>
 
 </body>
 

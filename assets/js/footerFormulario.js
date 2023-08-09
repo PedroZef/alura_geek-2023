@@ -1,3 +1,8 @@
+const formFooter = document.querySelector('.form-footer').addEventListener('edit', function(event) {
+    event.preventDefault();
+    validateForm();
+});
+
 function validateForm() {
     const nameInput = document.querySelector('input[name="name"]');
     const messageTextarea = document.querySelector('textarea[name="message"]');
@@ -16,7 +21,7 @@ function validateForm() {
         successMsg.style.display = 'block';
         buttonText.textContent = "Enviado";
 
-        setTimeout(function () {
+        setTimeout(function() {
             successMsg.style.display = 'none';
             buttonText.textContent = "Enviar Mensagem";
         }, 3000);
@@ -25,8 +30,3 @@ function validateForm() {
         messageTextarea.value = '';
     }
 }
-
-document.querySelector('.form-footer').addEventListener('submit', function (event) {
-    event.preventDefault();
-    validateForm();
-});

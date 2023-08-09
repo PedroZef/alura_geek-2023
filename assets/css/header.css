@@ -46,10 +46,9 @@ a {
     border-radius: 5px;
 }
 
-
 .button-login {
     padding: 16px 70px;
-    border: 1px solid #2a7ae4;
+    border: 1px solid #171782;
     background-color: transparent;
     border-radius: 5px;
     color: #2a7ae4;
@@ -63,46 +62,54 @@ a {
 }
 
 .lupa {
-    display:none;
+    display: none;
 }
 
 @media (max-width:950px) {
     .button-login {
-        padding:10px 40px;
+        padding: 10px 40px;
     }
 
     .barra-pesquisa {
-        width:220px;
+        width: 220px;
     }
+
     .lado-esquerdo {
-        gap:10px;
+        gap: 10px;
     }
-    .lado-esquerdo a img{
-        width:130px;
+
+    .lado-esquerdo a img {
+        width: 130px;
     }
 }
 
 @media (max-width:550px) {
-    .ajuste-barra-pesquisa {
-        display:none;
+    header {
+        padding: 20px 10px;
     }
 
-    .lado-esquerdo a img{
-        width:100px;
+    .ajuste-barra-pesquisa {
+        display: none;
+    }
+
+    .lado-esquerdo a img {
+        width: 120px;
+        height: auto;
     }
 
     .button-login {
-        padding:10px 20px;
+        padding: 10px 20px;
     }
 
     .lado-direito {
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-        width:100%;
-        padding-left:20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: 10px;
     }
+
     .lupa {
-        display:block;
+        display: block;
     }
 }

@@ -36,7 +36,7 @@ function exibirProdutosSimilares(produtos, sectionId) {
 const urlParams = new URLSearchParams(window.location.search);
 const selectedProductId = urlParams.get('id');
 
-fetch('https://64aef1c2c85640541d4df0b3.mockapi.io/produtos')
+fetch('https://64b9a04479b7c9def6c13b6d.mockapi.io/produto')
     .then(resposta => resposta.json())
     .then(produtos => {
         const produtoEspecifico = produtos.find(produto => produto.id === Number(selectedProductId));

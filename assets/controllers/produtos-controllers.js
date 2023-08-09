@@ -6,7 +6,7 @@ export const novoProduto = (imageUrl, name, id, price, alt) => {
         <img src="${imageUrl}" alt="${alt}" class="imagem-produto">
         <span class="produto-nome">${name}</span>
         <span class="span-bold">${price}</span>
-        <a href="products.html?id=${id}" class="ver-produto">Ver produto</a>
+        <a href="products.html?id=${id}" class="ver-produto" data-product-id="${id}">Ver produto</a>
     `;
 
     card.innerHTML = conteudo;
@@ -16,7 +16,7 @@ export const novoProduto = (imageUrl, name, id, price, alt) => {
 
 const preencherProdutos = (sectionId, produtos) => {
     const section = document.getElementById(sectionId);
-    const ulProdutos = section.querySelector('.produto');
+    const ulProdutos = section.querySelector('.produtos');
 
     produtos.forEach(produto => {
         const { imageUrl, name, id, price, alt } = produto;

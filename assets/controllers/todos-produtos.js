@@ -1,12 +1,12 @@
 import { produtoServicos } from "../services/produtos-services.js";
-import { deletarProduto, botaoApareceDelet } from "./deletar-produto.js";
+import { deletarProduto, botaoApareceDelet } from "../controllers/deletar-produto.js";
 
 function criaEstrutura() {
     const mainProduto = document.querySelector(".produto-especifico");
 
     mainProduto.innerHTML = `
     <div class="todos-produtos">
-        <div class="titulo titulo-espaço">
+        <div class="titulo titulo-espaco">
             <h3>Todos os produtos</h3>
             <a href="add-products.html">Adicionar produto</a>
         </div>
@@ -27,8 +27,8 @@ function controiCard(imageUrl, name, price, id, alt) {
     <span class="produto-nome">${name}</span>
     <span class="span-bold">R$ ${price}</span>
     <span>ID = ${id}</span>
-    <a class="editar" href="edit.html?id=${id}">Editar</a>
-    <button class="botao-remover">Deletar</button>
+    <a class="editar" href="edit.html?id=${id}"><img src="assets/image/produtos/edicao/lapis.png" class="lapis"></a>
+    <button class="botao-remover"></button>
     `;
 
     return produto;
