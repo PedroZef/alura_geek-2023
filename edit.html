@@ -1,94 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alura 2023 - Edit</title>
 
-    <link rel="icon" type="image/png" href="./assets/image/header/logo/alurageek-control.png">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    
-        <link rel="stylesheet" href="./assets/css/header.css">
-    <link rel="stylesheet" href="./assets/css/body.css">
-    <link rel="stylesheet" href="./assets/css/produtos.css">
-    <link rel="stylesheet" href="./assets/css/edita-produto.css">
-    <link rel="stylesheet" href="./assets/css/adicionar-produto.css">
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/image/header/logo/alurageek-control.png"
+    />
 
-    <link rel="stylesheet" href="./assets/css/footer.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/body.css" />
+    <link rel="stylesheet" href="./assets/css/produtos.css" />
+    <link rel="stylesheet" href="./assets/css/edita-produto.css" />
+    <link rel="stylesheet" href="./assets/css/adicionar-produto.css" />
+
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+  </head>
+
+  <body>
     <header>
-        <div class="lado-esquerdo">
-            <a href="index.html">
-                <img src="./assets/image/header/logo/alurageek.svg" alt="Logo Alura Geek">
-            </a>
-            <div class="ajuste-barra-pesquisa">
-                <input type="text" placeholder="O que deseja encontrar?" class="barra-pesquisa">
-            </div>
+      <div class="lado-esquerdo">
+        <a href="index.html">
+          <img
+            src="./assets/image/header/logo/alurageek.svg"
+            alt="Logo Alura Geek"
+          />
+        </a>
+        <div class="ajuste-barra-pesquisa">
+          <input
+            type="text"
+            placeholder="O que deseja encontrar?"
+            class="barra-pesquisa"
+          />
         </div>
-        <div class="lado-direito">
-            <a class="menu" href="products.html">
-                <button class="menu-adm">Menu Administrador</button>
-            </a>
-            <div class="lupa">
-                <img src="./assets/image/header/search/lupa.svg">
-            </div>
+      </div>
+      <div class="lado-direito">
+        <a class="menu" href="products.html">
+          <button class="menu-adm">Menu Administrador</button>
+        </a>
+        <div class="lupa">
+          <img src="./assets/image/header/search/lupa.svg" />
         </div>
+      </div>
     </header>
-    <main class="editar-produto"></main>
+    <main class="editar-produto">
+      <h1>Edita Produto</h1>
+      <form class="form-editar-produto">
+        <div class="campo-nome">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" required />
+          <div class="campo-preco">
+            <label for="">Preço</label>
+            <input
+              type="number"
+              id="preco"
+              name="preco"
+              min="0"
+              step="0.01"
+              required
+            />
+            <div class="campo-descricao">
+              <label for="descricao">Descrição</label>
+              <textarea
+                name="descricao"
+                id="descricao"
+                cols="30"
+                rows="5"
+                required
+              ></textarea>
+              <div class="campo-imagem">
+                <label for="imagem">Imagem</label>
+                <input
+                  type="file"
+                  id="imagem"
+                  name="imagem"
+                  accept="image/*"
+                  required
+                />
+                <div class="campo-categoria">
+                  <label for="categoria">Categoria</label>
+                  <select name="categoria" id="categoria">
+                    <option value="">Selecione uma categoria</option>
+                    <option value="camiseta">Camiseta</option>
+                    <option value="caneca">Caneca</option>
+                    <option value="poster">Poster</option>
+                  </select>
+                  <div class="campo-submit">
+                    <button type="submit">Editar Produto</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-ajuste-container">
-                <div class="footer-lado-esquerdo">
-                    <img src="./assets/image/footer/logo/alurageek.svg" alt="Logo Alura Geek">
-                    <nav>
-                        <ul>
-                            <li><a href="">Quem somos nós</a></li>
-                            <li><a href="">Política de privacidade</a></li>
-                            <li><a href="">Programa fidelidade</a></li>
-                            <li><a href="">Nossas lojas</a></li>
-                            <li><a href="">Quero ser franqueado</a></li>
-                            <li><a href="">Anuncie aqui</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <form class="form-footer" onsubmit="return validateForm()">
-                    <span>Fale conosco</span>
-                    <div class="input-nome">
-                        <input class="footer-input-required" name="name" required>
-                        <label>Nome</label>
-                    </div>
-                    <div class="ajuste-textarea">
-                        <div class="div-textarea">
-                            <textarea class="footer-textarea-required" name="message" required></textarea>
-                            <label>Escreva sua mensagem</label>
-                        </div>
-                    </div>
-                    <span id="error-msg" style="display: none; color: red;"></span>
-                    <span id="success-msg" style="display: none; color: green;"></span>
-                    <button class="botao-footer" type="submit">Enviar Mensagem</button>
-                </form>
+      <div class="footer-container">
+        <div class="footer-ajuste-container">
+          <div class="footer-lado-esquerdo">
+            <img
+              src="./assets/image/footer/logo/alurageek.svg"
+              alt="Logo Alura Geek"
+            />
+            <nav>
+              <ul>
+                <li><a href="">Quem somos nós</a></li>
+                <li><a href="">Política de privacidade</a></li>
+                <li><a href="">Programa fidelidade</a></li>
+                <li><a href="">Nossas lojas</a></li>
+                <li><a href="">Quero ser franqueado</a></li>
+                <li><a href="">Anuncie aqui</a></li>
+              </ul>
+            </nav>
+          </div>
+          <form class="form-footer" onsubmit="return validateForm()">
+            <span>Fale conosco</span>
+            <div class="input-nome">
+              <input class="footer-input-required" name="name" required />
+              <label>Nome</label>
             </div>
+            <div class="ajuste-textarea">
+              <div class="div-textarea">
+                <textarea
+                  class="footer-textarea-required"
+                  name="message"
+                  required
+                ></textarea>
+                <label>Escreva sua mensagem</label>
+              </div>
+            </div>
+            <span id="error-msg" style="display: none; color: red"></span>
+            <span id="success-msg" style="display: none; color: green"></span>
+            <button class="botao-footer" type="submit">Enviar Mensagem</button>
+          </form>
         </div>
+      </div>
 
-        <div class="footer__info">
-            <p class="footer__nome">
-                Desenvolvido por Pedro Zeferino da Silva &copy; 2023
-            </p>
-        </div>
+      <div class="footer__info">
+        <p class="footer__nome">
+          Desenvolvido por Pedro Zeferino da Silva &copy; 2023
+        </p>
+      </div>
     </footer>
 
     <script src="./assets/controllers/editar-produto.js" type="module"></script>
     <script src="./assets/services/produtos-services.js" type="module"></script>
 
     <script type="module" src="./assets/js/footerFormulario.js"></script>
-</body>
-
+  </body>
 </html>
